@@ -1,0 +1,13 @@
+$fluid-layout: (columns: 12, gutters: 0, math: fluid, output: float, gutter-position: inside);
+
+$susy:(
+  columns:12,
+  gutters: .5,
+  gutter-position: after,
+  );
+
+// @for $i from 1 through 12 {
+// 	.col-#{$i} { @include span($i of $susy); }
+// 	.col-#{$i}_last { @include span($i of $susy omega); }
+// 	.offset-#{$i}{ @include pre($i of $susy); }
+// }

@@ -1,0 +1,103 @@
+header {
+	@extend %clear;
+	@extend %full-width;
+	height: 80px;
+	z-index: 200;
+	top: 0;
+	left: 0;
+	h1 {
+		background: url('../img/logo.svg') no-repeat center center;
+		text-indent: -5000px;
+		width: 85px;
+		height: 41px;
+		background-size: 85px 41px;
+		@include breakpoint(below-tablet) {
+			margin: 0 auto;
+		}
+	}
+}
+
+#logo {
+	@extend %full-height;
+	float: left;
+	background-color: #6200EA;
+	@include breakpoint(below-tablet) {
+		@include calc(width, "100vw - 183px");
+	}
+	a {
+		@extend %full-height;
+		display: block;
+		@include breakpoint(above-tablet) {
+			padding: 0 40px;
+		}
+		@include breakpoint(below-tablet) {
+			padding: 0;
+		}
+	}
+}
+
+.header {
+	&--rating {
+		@extend %full-height;
+		background-color: white;
+		float: left;
+		@include breakpoint(above-tablet) {
+			@include calc(width, "100% - 348px");
+		}
+		@include breakpoint(below-tablet) {
+			width: 100%;
+		}
+		ul {
+			@extend %text-center;
+			margin-bottom: 5px;
+			-webkit-user-select: none;  
+			-moz-user-select: none;    
+			-ms-user-select: none;
+			user-select: none; 
+		}
+		li {
+			@extend %inline--middle;
+			cursor: pointer;
+			&.random--color {
+				i {
+					color: #6200EA;
+				}
+			}
+		}
+		i {
+			font-size: 40px;
+			color: $gray;
+		}
+		.current-level {
+			color: #6200EA;
+		}
+	}
+	&--button-section {
+		@extend %full-height;
+		float: right;
+		i, span {
+			@extend %color--white;
+		}
+		button {
+			@extend %full-height;
+			padding: 0 30px;
+			i {
+				font-size: 30px;
+				display: block;
+			}
+			span {
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+.trigger--about {
+	background-color: $gray-darker;
+	margin-right: -4px;
+}
+
+.language-select {
+	background-color: $gray-dark;
+}
+

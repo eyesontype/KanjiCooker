@@ -1,0 +1,47 @@
+.sidebar {
+	&--description {
+		@extend %color--white;
+		padding: 40px;
+		position: fixed;
+		right: 0;
+		z-index: 30;
+		transition: all 0.3s;
+		@include calc(height, "100vh - 80px");
+		top: 80px;
+		@include breakpoint(above-desktop) {
+			width: 360px;
+			transform: translateX(360px);
+		}
+		@include breakpoint(below-desktop) {
+			width: 50vw;
+			transform: translateX(50vw);
+		}
+		@include breakpoint(below-tablet) {
+			width: 100vw;
+			transform: translateX(100vw);
+		}
+		&.show {	
+			transform: translateX(0);
+		}
+		h3 {
+			display: inline-block;
+			padding: 5px 10px;;
+			font-size: 50px;
+		}
+		p {
+			font-size: 16px;
+			margin: 15px 0;
+			line-height: 1.5em;
+			letter-spacing: 0;
+		}
+		img {
+			@extend %full-width;
+			display: block;
+		}
+		.btn--close {
+			@extend %color--white;
+			top: 20px;
+			right: 20px;
+		}
+	}
+}

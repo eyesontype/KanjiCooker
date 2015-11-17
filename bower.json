@@ -1,0 +1,20 @@
+{
+  "name": "tenten project",
+  "version": "0.0.1",
+  "authors": [
+    "Hsiang Lee <hsiang@ten2.tw>"
+  ],
+  "description": "Gulp for starter projects",
+  "license": "MIT",
+  "homepage": "ten2.tw",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "susy": "latest"
+  }
+}

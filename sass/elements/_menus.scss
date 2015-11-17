@@ -1,0 +1,142 @@
+.menu {
+	&__main {
+		@extend %full-width;
+		@extend %color--white;
+		transition: all 0.3s;
+		position: fixed;
+		top: 0;
+		letter-spacing: 2px;
+		height: 100vh;
+		opacity: 0;
+		visibility: hidden;
+		z-index: 20;
+		&.open {
+			opacity: 1;
+			visibility: visible;
+		}
+		h3 {
+			font-size: 40px;
+			margin-bottom: 20px;
+		}
+		a {
+			@extend %color--white;
+			font-size: 42px;
+			font-weight: 100;
+			transition: color 0.3s;
+			@include breakpoint(above-desktop) {
+				&:hover {
+					color: $gray;
+				}
+			}
+		}
+		.btn--close {
+			@extend %color--white;
+			width: 30px;
+			height: 30px;
+			@include breakpoint(above-tablet) {
+				top: 120px;
+				right: 40px;
+			}
+			@include breakpoint(below-tablet) {
+				top: auto;
+				bottom: 20%;
+				right: 50%;
+				margin-right: -15px;
+			}
+			i {
+				font-size: 30px;
+			}
+		}
+	}
+	&--language {
+		@extend %text-center;
+		li {
+			margin: 25px 0;
+		}
+		.table {
+			height: 85%;
+		}
+	}
+	&--about {
+		@include breakpoint(above-tablet) {
+			padding-top: 20vh;
+		}
+		@include breakpoint(below-tablet) {
+			padding-top: 15vh;
+		}
+		&__contents {
+			display: none;
+			&.active {
+				display: block;
+			}
+			p, a {
+				margin-bottom: 20px;
+				line-height: 1.4em;
+				font-weight: 100;
+				@include breakpoint(below-desktop) {
+					@extend %align-center;
+				}
+				@include breakpoint(above-tablet) {
+					font-size: 42px;
+					letter-spacing: 1px;
+				}
+				@include breakpoint(below-tablet) {
+					font-size: 14px;
+				}
+			}
+			a {
+				display: inline-block;
+			}	
+		}
+		&--buttons {
+			position: absolute;
+			width: 100%;
+			bottom: 12vh;
+			left: 0;
+			ul {
+				@extend %text-center;
+			}
+			li {
+				@extend %inline--middle;
+				margin: 0 15px;
+			}
+			button {
+				@extend %color--white;
+			}
+			i, span {
+				display: block;
+			}
+			i {
+				font-size: 50px;
+			}
+			span {
+				font-size: 16px;
+			}
+		}
+		&__bottom {
+			position: absolute;
+			bottom: 5vh;
+		}
+	}
+}
+
+.social-buttons {
+	@extend %clear;
+	margin: 10vh 0;
+	li {
+		@include span(4 of 12);
+		@extend %text-center;
+		&:nth-child(3n) {
+			@include span(4 of 12 last);
+		}
+	}
+	i {
+		
+		display: block;
+		font-size: 80px;
+	}
+	span {
+		font-size: 20px;
+	}
+
+}

@@ -1,0 +1,179 @@
+//------------------------------------
+//  HELPER
+//------------------------------------
+
+// Add/remove floats
+.float-left { float: left; }
+
+.float-right { float: right; }
+
+.float-none { float: none; }
+
+
+// Position elements
+.align-center,
+%align-center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.no-margin { margin: 0; }
+
+
+// Displaying content
+.inline { display: inline; }
+
+%inline--middle {
+	@include inline-block(middle);
+}
+
+.show,
+%show {
+	display: block;
+	visibility: visible;
+}
+
+.hide,
+%hide {
+	display: none;
+	visibility: hidden;
+}
+
+//Color 
+%color--white {
+	color: white;
+}
+
+%color--red {
+	color: $red;
+}
+
+// Hide text
+.screen-reader,
+%screen-reader,
+.text-hide,
+%text-hide {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+
+// Full-width elements
+.full-width,
+%full-width {
+	width: 100%;
+}
+
+.full-height,
+%full-height {
+	height: 100%;
+}
+
+img.full-width,
+%full-width-image {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	width: auto;
+}
+
+
+// Text alignment
+.text-left,
+%text-left {
+	text-align: left;
+}
+
+.text-right,
+%text-right {
+	text-align: right;
+}
+
+.text-center,
+%text-center {
+	text-align: center;
+}
+
+.text-justify,
+%text-justify {
+	text-align: justify;
+}
+
+
+// Font weights
+.weight-light,
+%weight-light { font-weight: 300; }
+
+.weight-normal,
+%weight-normal { font-weight: 400; }
+
+.weight-semibold,
+%weight-semibold { font-weight: 600; }
+
+
+// All-caps text
+.text-uppercase { text-transform: uppercase; }
+
+
+// Caret icon
+.caret {
+	border-top: 5px solid;
+	border-right: 5px solid transparent;
+	border-left: 5px solid transparent;
+	display: inline-block;
+	margin: 0 0 3px 4px;
+	vertical-align: middle;
+	width: 0;
+}
+
+//Table Cell
+.table,
+%table{
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+
+.table-cell,
+%table-cell{
+	display: table-cell;
+	vertical-align: middle;
+}
+.clear,
+%clear {
+	&:before, &:after{
+		content: " ";
+		display: table;
+	}
+	&:after{
+		clear: both;
+	}
+}
+
+// .header-gap {
+// 	@include breakpoint(above-large) {
+// 		margin-top: 159px;
+// 	}
+// 	@include breakpoint(below-large) {
+// 		margin-top: 139px;
+// 	}
+// 	@include breakpoint(below-tablet) {
+// 		margin-top: 99px;
+// 	}
+// }
+
+.arrow-down {
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid $red-dark;
+}
+

@@ -1,0 +1,47 @@
+body{
+	overflow-x: hidden;
+}
+
+.ch {
+	h1, h2, h3, h4, h5, ul, li, a, span, button, p {
+		font-family: $default-trad_chinese-font;
+		letter-spacing: 1px;
+	}
+	font-family: $default-trad_chinese-font;
+}
+
+.jp {
+	font-family: $default-japanese-font;
+	h1, h2, h3, h4, h5, ul, li, a, span, button, p {
+		font-family: $default-japanese-font;
+	}
+}
+
+h1,h2,h3,h4,h5,h6,ul,li,p,span,a {
+	font-family: $default-trad_chinese-font;
+}
+
+
+a{
+	text-decoration: none;
+}
+
+input, button, a, textarea{
+	outline: 0;
+}
+
+.row, .md-row, .sm-row {
+	padding: 0 20px;
+}
+
+.row{
+	@include container($inner-wrap);
+}
+
+.md-row{
+	@include container($md-wrap);
+}
+
+.sm-row{
+	@include container($sm-wrap);
+}

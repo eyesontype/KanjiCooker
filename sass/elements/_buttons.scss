@@ -1,0 +1,39 @@
+.btn--close {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	display: block;
+	top: 20px;
+	right: 20px;
+	padding: 0;
+	i {
+		font-size: 20px;
+		margin: 0;
+
+	}
+}
+
+.btn--reload-type {
+	@extend %full-width;
+	@extend %text-center;
+	// border-top: 1px solid $gray-light;
+	color: $gray-darkest;
+	padding: 15px 0;
+	// @include breakpoint(above-desktop) {
+	// 	display: none;
+	// }
+	// @include breakpoint(below-desktop) {
+	// 	display: block;
+	// }
+	// span, i {
+	// 	@extend %inline--middle;
+	// }
+	// span {
+	// 	font-size: 14px;
+	// }
+	i {
+		font-size: 25px;
+		display: block;
+		transform: translateX(2px);
+	}
+}

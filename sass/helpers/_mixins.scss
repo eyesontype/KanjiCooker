@@ -1,0 +1,111 @@
+//------------------------------------
+//  MIXINS
+//------------------------------------
+
+@mixin special-font($ff, $fz, $fw: normal, $fs: normal){
+	font-family: $ff;
+	font-size: $fz;
+	font-weight: $fw;
+	font-style: $fs;
+}
+
+@mixin animation ($delay, $duration, $animation) {
+	-webkit-animation-delay: $delay;
+	-webkit-animation-duration: $duration;
+	-webkit-animation-name: $animation;
+	-webkit-animation-fill-mode: forwards; 
+	
+	-moz-animation-delay: $delay;
+	-moz-animation-duration: $duration;
+	-moz-animation-name: $animation;
+	-moz-animation-fill-mode: forwards; 
+	
+	animation-delay: $delay;
+	animation-duration: $duration;
+	animation-name: $animation;
+	animation-fill-mode: forwards; 
+}
+
+@mixin keyframes($name) {
+	@-webkit-keyframes #{$name} {
+		@content; 
+	}
+	@-moz-keyframes #{$name} {
+		@content;
+	}
+	@-ms-keyframes #{$name} {
+		@content;
+	}
+	@keyframes #{$name} {
+		@content;
+	} 
+}
+
+@mixin button($color, $padding, $border: 0px, $border-radius: 5px) {
+	background-color: $color;
+	border: $border;
+	border-radius: $border-radius;
+	padding: $padding;
+	transition: background 0.25s;
+	
+	&:hover {
+		cursor: pointer;
+		background-color: mix(black, $color, 15%);
+	}
+}
+
+@mixin inline-block($align: middle) {
+	display: inline-block;
+	vertical-align: $align;
+}
+
+@mixin breakpoint($point) {
+	@if $point == 'above-large' {
+		@media (min-width: 1701px) { @content; }
+	}
+	@if $point == 'below-large' {
+		@media (max-width: 1700px) { @content; }
+	}
+	@else if $point == 'above-medium' {
+		@media (min-width: 1251px) { @content; }
+	}
+	@else if $point == 'below-medium' {
+		@media (max-width: 1250px) { @content; }
+	}
+	@else if $point == 'above-desktop' {
+		@media (min-width: 1025px)  { @content; }
+	}
+	@else if $point == 'below-desktop' {
+		@media (max-width: 1024px)  { @content; }
+	}
+	@else if $point == 'above-small' {
+		@media (min-width: 851px)  { @content; }
+	}
+	@else if $point == 'below-small' {
+		@media (max-width: 850px)  { @content; }
+	}
+	@else if $point == 'above-tablet' {
+		@media (min-width: 768px)  { @content; }
+	}
+	@else if $point == 'below-tablet' {
+		@media (max-width: 767px)  { @content; }
+	}
+	@else if $point == 'below-mobile' {
+		@media (max-width: 550px)  { @content; }
+	}
+}
+
+@mixin border-shadow-effect($color){
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	border-sizing: border-box;
+	box-shadow: 0 0 0 1px $color inset;
+	transition: all 0.25s;
+}
+
+@mixin calc($property, $expression) { 
+  #{$property}: -webkit-calc(#{$expression}); 
+  #{$property}: calc(#{$expression}); 
+} 

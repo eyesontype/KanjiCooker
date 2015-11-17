@@ -1,0 +1,74 @@
+//------------------------------------
+//  BASE
+//------------------------------------
+
+// Base font sizes and colors
+$base-font-size:     16px !default;
+$base-line-height:   24px !default;
+$base-font-color:    #333333 !default;
+$base-link-color:    #62b3e7 !default;
+$base-heading-color: #181818 !default;
+$base-sub-heading-color: #808080 !default;
+
+// Base wrap width
+$inner-wrap: 1140px;
+$md-wrap: 940px;
+$sm-wrap: 800px;
+
+// Base img root
+$img-root: '';
+$img-theme: '';
+
+
+
+
+//------------------------------------
+//  FONT FAMILY
+//------------------------------------
+$default-trad_chinese-font: "source-han-sans-traditional",sans-serif;
+$default-simplified_chinese-font: "微软雅黑", "Microsoft YaHei", Helvetica, Arial, sans-serif;
+$default-english-font: Helvetica, Arial, sans-serif;
+$default-japanese-font: "source-han-sans-japanese",sans-serif;
+
+
+
+//------------------------------------
+//  COLORS
+//------------------------------------
+
+// Selection colors
+$selection-background:  #666666 !default;
+$selection-color:       #ffffff !default;
+
+// Form placeholder colors
+$placeholder-color:     #bbbbbb !default;
+
+// Colors used for our objects' borders, etc
+$object-ui-color:       #cccccc !default;
+
+// Dropdown colors
+$dropdown-bg-color:     #ffffff !default;
+$dropdown-border-color: #ededed !default;
+$dropdown-hover-color:  #f3f8f8 !default;
+$dropdown-header-color: #aaaaaa !default;
+
+// Button font color
+$button-font-color:       #ffffff !default;
+$button-hover-font-color: #ffffff !default;
+
+$red: #E8102B;
+$red-dark: #D41F1F;
+$gray-lightest: #EFEFEF;
+$gray-light: #E6E6E6;
+$gray: #cccccc;
+$gray-dark: #9B9B9A;
+$gray-darker: #727272;
+$gray-darkest: #444444;
+
+$gray-text: #949594;
+
+
+
+//------------------------------------
+//  Components
+//------------------------------------

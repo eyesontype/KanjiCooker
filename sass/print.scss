@@ -1,0 +1,48 @@
+@import "base/reset";
+
+header,
+.menu__main,
+.sidebar--description,
+.type-selection__nav,
+.type-selection__footer,
+footer {
+	display: none!important;
+}
+
+.type-selection__body {
+	li {
+		display: none;
+		margin-bottom: 3px;
+		span, div {
+			display: inline-block;
+			vertical-align: bottom;
+		}
+		.title, .content {
+			padding: 15px 10px;
+			h3 {
+				font-family: "微軟正黑體", "Microsoft JhengHei", Helvetica, Arial, sans-serif;
+				letter-spacing: 0;
+				font-size: 55px;
+				line-height: 100%;
+			}
+		}
+		.title {
+			background-color: #FF1744;
+		}
+		&.show {
+			background-color: #FF1744;
+			display: inline-block;
+			vertical-align: middle;
+			.title {
+				background-color: #FF1744;
+				color: white;
+			}
+			.content {
+				color: #444444;
+	margin-left: -5px;
+			}
+		}
+	}
+} 
+
+

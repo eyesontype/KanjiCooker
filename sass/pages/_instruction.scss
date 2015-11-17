@@ -1,0 +1,45 @@
+.section--instruction {
+	padding: 60px 0;
+	li {
+		@include breakpoint(above-medium) {
+			height: 500px;
+			@include span(4 of 12);
+			&:nth-child(3n) {
+				@include span(4 of 12 last);
+			}
+		}
+		@include breakpoint(below-medium) {
+			height: 600px;
+			@include span(6 of 12);
+			&:nth-child(2n) {
+				@include span(6 of 12 last);
+			}
+		}
+		@include breakpoint(above-small) {
+			margin-bottom: gutter(15);
+		}
+		@include breakpoint(below-small) {
+			height: auto;
+			margin-bottom: 30px;
+			@include span(12 of 12);
+			&:nth-child(2n) {
+				@include span(12 of 12 );
+			}
+		}
+		img {
+			width: 100%;
+			display: block;
+		}
+		h3 , p {
+			color: $gray-darkest;
+		}
+		h3 {
+			font-size: 40px;
+		}
+		p {
+			margin: 30px 0;
+			font-size: 18px;
+			line-height: 1.3em;
+		}
+	}
+}

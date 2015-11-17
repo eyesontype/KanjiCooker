@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<!--[if lt IE 9]> <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script> <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script> <![endif]-->
+	<style>
+		.bg{
+			background: #53B5BE;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
+		.bg img{
+			display: block;
+			width: 1024px;
+			left: 50%;
+			top: 50%;
+			margin-left: -512px;
+			margin-top: -288px;
+			position: absolute;
+		}
+		.content{
+			position: absolute;
+			width: 1024px;
+			height: 500px;
+			left: 50%;
+			top: 50%;
+			margin-left: -512px;
+			margin-top: -250px;
+		}
+		.browsers{
+			margin: 350px 0px 0px 40px;
+		}
+		.browsers a{
+			display: inline-block;
+			text-indent: 50px;
+			padding: 5px 0px;
+			color: white;
+			text-decoration: none;
+		}
+		.browsers [class*="icon-"]{
+			width: 140px;
+		}
+		.icon-chrome{
+			background: url(img/chrome.png) no-repeat top left;
+		}
+		.icon-firefox{
+			background: url(img/firefox.png) no-repeat top left;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="bg">
+		<img src="img/01/bg.jpg" alt="">
+	</div>
+
+	<div class="content">
+		<div class="browsers">
+			<a href="http://www.google.com/intl/zh-TW/chrome/" class="icon-chrome">Chrome</a>
+			<a href="http://mozilla.com.tw/firefox/new/" class="icon-firefox">Firefox</a>
+		</div>
+		<div class="facebook">
+			
+		</div>
+	</div>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+	</html>

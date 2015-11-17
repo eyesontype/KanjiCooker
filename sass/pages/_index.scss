@@ -1,0 +1,114 @@
+.type-selection {
+	background-color: $gray-lightest;
+	&__body {
+		padding: 20px;
+		@include breakpoint(above-tablet) {
+			@include calc(min-height, "100vh - 171px");
+		}
+		@include breakpoint(below-tablet) {
+			min-height: 60vh;
+		}
+		li {
+			display: none;
+			margin-bottom: 2px;
+			.title, .content {
+				padding: 10px 5px;
+				font-size: 0;
+				h3 {
+					letter-spacing: 0;
+					@include breakpoint(above-large) {
+						font-size: 80px;
+					}
+					@include breakpoint(below-large) {
+						font-size: 70px;
+					}
+					@include breakpoint(below-desktop) {
+						font-size: 55px;
+					}
+					@include breakpoint(below-tablet) {
+						font-size: 24px;
+					}
+				}
+			}
+			&.show {
+				@extend %inline--middle;
+			}
+			.title,
+			.content {
+				@include inline-block(top);
+			}
+			.title {
+				cursor: pointer;
+				h3 {
+					border-bottom: 3px solid #6200EA;
+					padding-bottom: 3px;
+				}
+			}
+			.content {
+				margin-left: -5px;
+				color: $gray-darkest;
+				h3 {
+					font-weight: 200;
+				}
+			}
+		}
+	}
+	&__footer {
+		position: fixed;
+		width: 100%;
+
+		bottom: 0;
+		ul {
+			@extend %clear;
+		}
+		&__list {
+			@include span(4 of $fluid-layout);
+			position: relative;
+			background-color: white;
+			transition: background-color 0.3s;
+			@include breakpoint(above-desktop) {
+				&:hover {
+					background-color: $gray-lightest;
+				}
+			}
+			> button,
+			> a {
+				@extend %full-width;
+				@extend %text-center;
+				display: block;
+				font-size: 18px;
+				color: $gray-darker;
+				@include breakpoint(below-desktop) {
+					height: 70px;
+				}
+				@include breakpoint(above-tablet) {
+					padding: 20px 0;
+				}
+				@include breakpoint(below-tablet) {
+					padding: 10px 0;
+					height: 50px;
+					span {
+						display: none;
+					}
+				}
+				i {
+					font-size: 30px;
+					display: block;
+					@extend %text--center;
+				}
+			}
+		}
+	}
+	.current-time {
+		margin-top: 80px;
+		p {
+			color: $gray-text;
+			@include breakpoint(above-tablet) {
+				font-size: 20px;
+			}
+			@include breakpoint(below-tablet) {
+				font-size: 14px;
+			}
+		}
+	}
+}

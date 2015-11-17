@@ -1,0 +1,56 @@
+.drop--type-selection-footer {
+	@extend %text-center;
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.3s;
+	position: absolute;
+	padding: 40px 0;
+	width: 100%;
+	background: white;
+	@include breakpoint(above-tablet) {
+		bottom: 95px;
+	}
+	@include breakpoint(below-tablet) {
+		width: 100vw;
+		bottom: 50px;
+	}
+	&.open {
+		opacity: 1;
+		pointer-events: auto;
+	}
+	h4 {
+		font-size: 14px;
+		color: $gray-dark;
+		margin-bottom: 20px;
+	}
+	ul {
+		@extend %align-center;
+	}
+	li {
+		@extend %inline--middle;
+		button {
+			font-size: 20px;
+			color: $gray-darkest;
+			transition: all 0.3s;
+			padding: 15px;
+			border-bottom: 3px solid $gray-lightest;
+			&.active {
+				color: black;
+				border-bottom: 3px solid black;
+			}
+			@include breakpoint(above-desktop) {
+				&:hover {
+					color: black;
+					border-bottom: 3px solid black;
+				}
+			}
+		}
+	}
+	h3 {
+		font-size: 30px;
+		color: $gray-darkest;
+	}
+	.content {
+		padding: 40px 0;
+	}
+}
